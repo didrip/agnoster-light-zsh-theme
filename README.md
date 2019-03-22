@@ -1,6 +1,6 @@
-# agnoster.zsh-theme
+# agnoster-light.zsh-theme
 
-A ZSH theme optimized for people who use:
+A fork of [agnoster](https://github.com/agnoster/agnoster-zsh-theme) ZSH theme for light background. optimized for people who use:
 
 - Solarized
 - Git
@@ -77,6 +77,8 @@ customize_agnoster() {
 ![Customization demo](https://github.com/apodkutin/agnoster-zsh-theme/raw/customize-prompt/agnoster_customization.gif)
 
 ## Future Work
+
+Auto-detect background color to use light colors only if needed.
 
 I don't want to clutter it up too much, but I am toying with the idea of adding RVM (ruby version) and n (node.js version) display.
 
