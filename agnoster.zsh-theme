@@ -50,6 +50,13 @@ CROSS="\u2718"
 LIGHTNING="\u26a1"
 GEAR="\u2699"
 
+# Colors (256 mode)
+LIGHT_GRAY=250
+WHITE=255
+LIGHT_BLUE=38
+LIGHT_RED=9
+LIGHT_YELLOW=229
+
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
 # rendering default background/foreground.
@@ -85,7 +92,7 @@ prompt_context() {
   local user=`whoami`
 
   if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CONNECTION" ]]; then
-    prompt_segment $PRIMARY_FG default " %(!.%{%F{yellow}%}.)$user@%m "
+    prompt_segment $PRIMARY_FG $LIGHT_GRAY " %(!.%{%F{yellow}%}.)$user@%m "
   fi
 }
 
@@ -116,7 +123,7 @@ prompt_git() {
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment blue $PRIMARY_FG ' %~ '
+  prompt_segment $LIGHT_BLUE $PRIMARY_FG ' %~ '
 }
 
 # Status:
